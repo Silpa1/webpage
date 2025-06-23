@@ -1,22 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Silpa Babu | MRI Researcher</title>
   <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 1000px;
       margin: 40px auto;
+      background: #f9fbff;
+      color: #222;
       padding: 20px;
       line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-    h1, h2 {
-      color: #2c3e50;
     }
     a {
       color: #007acc;
@@ -25,19 +25,112 @@
     a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 30px;
+
+    /* Header Nav */
+    header {
+      background: #e6f0ff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      border-radius: 8px;
+    }
+    header .title {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #2c3e50;
+    }
+    header nav a {
+      font-weight: 600;
+      margin-left: 20px;
+    }
+
+    /* Intro Container */
+    .intro-container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+
+    /* Profile photo */
+    .intro-photo {
+      flex: 0 0 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #007acc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 180px;
+      height: 180px;
+    }
+    .intro-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Intro Text */
+    .intro-text {
+      flex: 1 1 400px;
+    }
+    .intro-text h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+    .intro-text .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+    }
+    .intro-text p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .intro-text a.cv-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border: 2px solid #007acc;
+      border-radius: 6px;
+      color: #007acc;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .intro-text a.cv-link:hover {
+      background-color: #007acc;
+      color: white;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      border-bottom: 3px solid #007acc;
+      padding-bottom: 8px;
+      color: #2c3e50;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
     }
     ul.skills {
-      list-style-type: square;
+      list-style-type: disc;
+      padding-left: 20px;
       columns: 2;
+    }
+    ul.skills li {
+      margin-bottom: 8px;
+    }
+    ul.publications, ul.contact-info {
       padding-left: 20px;
     }
-    .subtitle {
-      font-size: 1.1em;
-      color: #555;
-      margin-top: -12px;
-      margin-bottom: 20px;
+    ul.publications li, ul.contact-info li {
+      margin-bottom: 12px;
     }
   </style>
 </head>
